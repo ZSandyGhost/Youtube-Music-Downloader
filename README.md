@@ -2,7 +2,12 @@
 
 Download music from your favourite Youtube channels!
 
-Usage: 
+# Requirements:
+- youtube-dl: ```sudo apt install youtube-dl```
+- ffmpeg: ```sudo apt install ffmpeg```
+- BeautifulSoup: ```sudo pip3 install BeautifulSoup4```
+
+# Usage: 
   Add your Youtube channels to 'ytm-channels.conf' file
 ```bash
 optional arguments:
