@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 
-from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 import os, sys
 import socket
 import time
 import argparse
 import shutil
+try:
+	from bs4 import BeautifulSoup
+except ImportError as error:
+	print(error)
+	sys.exit(1)
 
 NUM_MUSIC = None
 AUTO = False
@@ -64,7 +68,11 @@ def parse_music_info(channel):
 		
 	r = None
 	try:
-		r = urlopen(url)
+		try:
+			r = urlopen(url)
+		except KeyboardInterrupt:
+			print('\n[!] Exiting..')
+			sys.exit()
 	except Exception:
 		print('[!] Connection failed')
 		sys.exit()
