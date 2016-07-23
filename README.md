@@ -10,6 +10,10 @@ Download music from your favourite Youtube channels!
 # Usage: 
   Add your Youtube channels to 'ytm-channels.conf' file
 ```bash
+usage: ytm [-h] [-n [NUMBER]] [-a] [-u USER]
+
+Youtube music downloader
+
 optional arguments:
   -h, --help            show this help message and exit
   -n [NUMBER], --number [NUMBER]
@@ -18,3 +22,8 @@ optional arguments:
                         downloaded
   -u USER, --user USER  Download music from a specified user
 ```
+
+# Command Line Example:
+    $ python3 ytm -a
+    $ python3 ytm -a -n 10
+    $ python3 ytm -u AllTrapNation -n 10
